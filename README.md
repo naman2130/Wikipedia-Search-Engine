@@ -13,16 +13,16 @@ For example, index0.txt, index1.txt, index2.txt are generated. These files may c
 Along with these I have also stored the offsets of each of the field files. This reduces the search time to O(logm * logn) where m is the number of words in the vocabulary file and m is the number of words in the largest field file.
 
 
-###Main Functions:
+### Main Functions:
 
-wikiIndexer.py This function takes as input the corpus and creates the entire index in field separated manner. Along with the field files, it also creates the offsets for the same. It also creates a map for the title and the document id along with its offset. Apart from this it also creates the vocabulary List
+`wikiIndexer.py` This function takes as input the corpus and creates the entire index in field separated manner. Along with the field files, it also creates the offsets for the same. It also creates a map for the title and the document id along with its offset. Apart from this it also creates the vocabulary List
 In order to run this code run the following: python wikiIndexer.py ./sampleText ./outputFolderPath
 
-search.py This function takes as input the query and returns the top ten results from the Wikipedia corpus.
+`search.py` This function takes as input the query and returns the top ten results from the Wikipedia corpus.
 In order to run this code run the following: python search.py ./outputFolderPath
 
-###Helper Functions:
+### Helper Functions:
 
-textProcessing.py This helper function does all the preprocessing. It acts as helper for search.py, wikiIndexer.py
+`textProcessing.py` This helper function does all the preprocessing. It acts as helper for search.py, wikiIndexer.py
 
-fileHandler.py This function does all the file preprocessing. It acts as helper for wikiIndexer.py
+`fileHandler.py` This function does all the file preprocessing. It acts as helper for wikiIndexer.py
