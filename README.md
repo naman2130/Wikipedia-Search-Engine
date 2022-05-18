@@ -5,7 +5,7 @@ Multi word and multi field search on Wikipedia Corpus is implemented. SAX Parser
 Casefolding: Casefolding is easily done.
 Tokenisation: Tokenisation is done using regular expressions.
 Stop Word Removal: Stop words are removed by referring a stop word list.
-Stemming: Using an externalFor stemming, a python library PyStemmer is used.
+Stemming:For stemming, a python library PyStemmer is used.
 The index, consisting of stemmed words and posting list is build for the corpus after performing the above operations along with the title and the unique mapping I have used for each document. Thus the document id of the wikipedia page is ignored. This helps in reducing the size as the document id do not begin with single digit number in the corpus. Since the size of the corpus will not fit into the main memory several index files are generated. Next, these index files are merged using K-Way Merge along with creating field based indices files.
 
 For example, index0.txt, index1.txt, index2.txt are generated. These files may contain the same word. Hence, K Way Merge is applied and field based files are generated along with their respective offsets. These field based files are generated using multi-threading. This helps in doing multiple I/O simultaneously. Along with this the vocabulary file is also generated.
