@@ -12,7 +12,6 @@ For example, index0.txt, index1.txt, index2.txt are generated. These files may c
 
 Along with these I have also stored the offsets of each of the field files. This reduces the search time to O(logm * logn) where m is the number of words in the vocabulary file and m is the number of words in the largest field file.
 
-The src folder contains the following files:
 
 ###Main Functions:
 
